@@ -22,7 +22,7 @@ def index():
             a  = 3
             b= 2
             # 这里是向前端不断传送数据的部分
-            yield "data: %s %d\n\n" % (0, 0)
+            yield "data: %s \n\n" % ("顶尖的伟业需要艰苦卓绝的奋斗")
             for i, c in enumerate(itertools.cycle('\|/-')):
                 time.sleep(1)
                 message = p.get_message()
