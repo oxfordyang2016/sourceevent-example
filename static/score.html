@@ -1,0 +1,63 @@
+<!-- https://www.w3schools.com/howto/howto_js_countdown.asp-->
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <link rel="icon" href="https://photosfor2018.oss-cn-hangzhou.aliyuncs.com/dreamforfuture.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="/v1/finance.js"></script>
+<script>
+    if (!!window.EventSource) {
+      var source = new EventSource('/');
+      source.onmessage = function(e) {
+        // $("#data").text(e.data);
+        document.getElementById("demo").innerHTML = e.data;
+      }
+    }
+</script>
+<style>
+#demo{
+  text-align: center;
+  font-size: 60px;
+  color: red;
+  position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+   
+
+}
+
+#demo1{
+  text-align: center;
+  font-size: 60px;
+  color: red;
+  position: absolute;
+    top: 65%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+   
+
+}
+
+
+
+
+body{
+    background-color: green;
+}
+
+</style>
+</head>
+<body>
+
+<ul id="demo"></ul>
+</body>
+</html>
