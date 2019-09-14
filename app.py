@@ -29,12 +29,13 @@ def index():
                 print(message)
                 print(b,a)
                 if message != None:
-                    try:
-                        print(message["data"])
-                        time.sleep(0.2)
-                        yield "data: %.3f\n\n" % (float(message["data"]))
-                    except:
-                        print("datat get error")
+                    if type(message["data"])!= int:
+                        try:
+                            print(message["data"])
+                            time.sleep(0.2)
+                            yield "data: %.3f\n\n" % (float(message["data"]))
+                        except:
+                            print("datat get error")
                 else:
                     print("检测是否执行下一句")
                 a = a*-1
